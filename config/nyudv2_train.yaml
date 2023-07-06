@@ -1,0 +1,24 @@
+gpu_id: '1'
+model: 'Fusion'   ##################################
+dataset: 'nyudv2'
+# encoder: 'deeplabv3_resnet101'
+num_classes: 40
+pre_ckpt: ''
+checkpoint: 'checkpoints/50.29_sim_orth_resbn_bnsigmoid_loss_2_feature_2e-4l1sparse_kernel_3_randommis_bs16_lr_0.02_60000_enc_0.1_1_1_resnet152_refinenet_best_missing_nyudv2.pth'
+train_data: '/test/datasets/nyudv2/ImageSets'
+is_test: True
+batch_size: 16    ###################################
+val_test_batch_size: 1
+skip_step: 50
+height: 425
+width: 425
+max_iteration: 60000
+encoder_lr: 0.02  ###############################
+decoder_lr: 0.02
+save_step: 500
+power: 0.9
+num_worker: 4
+continue_training: False
+test_only: True
+modality: missing
+missing_rate: 0

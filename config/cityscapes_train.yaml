@@ -1,0 +1,24 @@
+gpu_id: '1'
+model: 'Fusion'   ##################################
+dataset: 'cityscapes'
+encoder: 'deeplabv3_resnet101'
+num_classes: 19
+checkpoint: '86.68_orth_bnsigmoid_loss_1_feautre_2e-4l1sparse_kernel_3_randommiss_lr_0.01_60000_bs16_enc_1_1_resnet101_deeplabv3_latest_missing_cityscapes.pth'
+train_data: '/test/datasets/cityscapes_fine_and_coarse/ImageSets_depth_with_noise'
+is_test: False
+batch_size: 16    ###################################
+val_test_batch_size: 1
+skip_step: 100
+height: 384
+width: 768 
+max_iteration: 60000
+encoder_lr: 0.01   ###############################
+decoder_lr: 0.01
+save_step: 500
+power: 0.9
+num_worker: 4
+test_only: True
+continue_training: False
+save_vis_results: False
+modality: missing
+missing_rate: 0  # 0, 0.2, 0.4, 0.6, 0.8, 1.0

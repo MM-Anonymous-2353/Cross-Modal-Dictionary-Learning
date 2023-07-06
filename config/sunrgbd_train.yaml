@@ -1,0 +1,23 @@
+gpu_id: '0'
+model: 'Fusion'   ##################################
+dataset: 'sunrgbd'
+num_classes: 37
+fusion_ckpt: ''
+checkpoint: ''
+train_data: '/test/datasets/sunrgbd/ImageSets'
+is_test: True
+batch_size: 16    ###################################
+val_test_batch_size: 1
+skip_step: 100
+height: 425
+width: 425 
+max_iteration: 80000
+encoder_lr: 0.01   ###############################
+decoder_lr: 0.01
+save_step: 2000
+power: 0.9
+num_worker: 4
+continue_training: False
+test_only: Flase
+modality: missing
+missing_rate: 0
